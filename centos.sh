@@ -17,11 +17,17 @@ yum -y install man-pages man-db man
 mandb
 
 # Install useful tools
-yum -y install tmux htop vim glances
+yum -y install tmux vim
+yum -y install htop glances
+yum -y install traceroute
 
 # Reinstall packages to enable its man-pages
-yum -y reisntall git
+yum -y reinstall git
+git config --global user.email "34487074+Userbit@users.noreply.github.com"
+git config --global user.name "Userbit"
 
 # Setup SSH Server
 #yum -y reinstall openssh-server openssh-clients
 
+# Setup .rc files
+cp ./.vimrc $HOME/
