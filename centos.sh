@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Disable tsflags=nodocs to enable man pages
 # https://unix.stackexchange.com/a/525250
 sed -i -e '/tsflags=nodocs/s/^/#/' /etc/yum.conf /etc/dnf/dnf.conf || true
@@ -18,7 +20,7 @@ mandb
 yum -y install tmux htop vim glances
 
 # Reinstall packages to enable its man-pages
-yum -y reintall git
+yum -y reisntall git
 
 # Setup SSH Server
 #yum -y reinstall openssh-server openssh-clients
